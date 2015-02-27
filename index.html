@@ -1,17 +1,34 @@
 <!DOCTYPE HTML>
 <html lang="en">
 <head>
-	<title>Shower Presentation Engine</title>
+	<title>Web Components: Background, Opportunities and Challenges</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=792, user-scalable=no">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
 	<link rel="stylesheet" href="shower/themes/ribbon/styles/screen.css">
 </head>
 <body class="list">
-	<header class="caption">
-		<h1>Shower Presentation Engine</h1>
-		<p>Yours Truly, Famous Inc.</p>
-	</header>
+
+<header class="caption">
+    <div class="offscreen">
+        <h2>Accessibility Note</h2>
+
+        <p>
+            This presentation uses an out-of-the box HTML slideshow script which by itself is inaccessible.
+            Keybindings exist to traverse forward and backward with
+            arrow keys, but focus never shifts as the slides advance. The slides
+            themselves are well structured, so you can use a read all command to listen to everything linearly.
+            I've also added a live region which should work well for screen readers that support live regions. As you
+            traverse through the slides using arrow keys, the slide's content will be added to the live region.
+            If all else fails, you can also access the slideshow content by turning off CSS and JavaScript.
+        </p>
+    </div>
+    <h1>Web Components: Background, Opportunities and Challenges</h1>
+
+    <p>Alice Boxhall, Google<br>
+    Karl Groves, The Paciello Group</p>
+</header>
+
 	<section class="slide cover" id="Cover"><div>
 		<h2>Shower Presentation Engine</h2>
 		<p>Brought to you by <a href="http://pepelsbey.net">Vadim Makeev</a></p>
@@ -163,7 +180,385 @@
 				}
 		</style>
 	</div></section>
-	<p class="badge"><a href="https://github.com/shower/shower">Fork me on Github</a></p>
+
+<section class="slide">
+    <div>
+        <pre style="font-size: .5em;"><code>&lt;template id="bargraph-template"&gt;
+            &lt;style&gt;/** CSS all the things */&lt;/style&gt;
+            &lt;content&gt;&lt;/content&gt;
+            &lt;/template&gt;
+            &lt;script&gt;
+            var doc = document.currentScript.ownerDocument,
+            BargraphProto = Object.create(HTMLElement.prototype),
+            template = doc.querySelector("#bargraph-template"),
+            graph = template.content.cloneNode(true);
+
+            BargraphProto.createdCallback = function() {
+            // moar stuff here
+
+            var shadow = this.shadow = this.createShadowRoot();
+            this.shadow.appendChild(graph);
+
+            // even moar stuff here
+
+            var Bargraph = doc.registerElement('bar-graph', {
+            'prototype': BargraphProto
+            });
+            &lt;/script&gt;
+        </code></pre>
+        <a href="https://github.com/karlgroves/bar-graph/tree/accessible">Bar Graph (accessible)</a>
+    </div>
+</section>
+
+<section class="slide">
+    <div>
+        <h2>Using Custom Elements</h2>
+        <pre><code>&lt;button is=&quot;w3c-disclosure&quot;
+            controlfor=&quot;details1&quot; expanded&gt;
+            Expand section 1
+            &lt;/button&gt;
+            &lt;section id=&quot;details1&quot;&gt;
+            Lorem ipsum dolor sit amet, consectetur ...
+            &lt;/section&gt;
+        </code></pre>
+        <div class="text-center"><a href="https://github.com/ThePacielloGroup/disclosure-button">Disclosure Button</a> </div>
+    </div>
+</section>
+
+<section class="slide">
+    <div>
+        <h2>But Why?!?</h2>
+        <div class="text-center">
+            <a href="https://speakerdeck.com/robdodson/multi-device-apps-with-web-components"><img src="pictures/web-apps.png" alt="The real point of web components is to build cohesive applications"></a></div>
+    </div>
+</section>
+
+<section class="slide">
+    <div>
+        <h2>Support</h2>
+        <div class="text-center"><img src="pictures/ha-ha.jpg" alt="Nelson, a character from the Simpsons, pointing and laughing."/></div>
+    </div>
+</section>
+
+<section class="slide">
+    <div>
+        <h2>Support</h2>
+        <div class="text-center"><img src="pictures/browsersupport.png" alt=""></div>
+
+        <div class="offscreen">
+            <table>
+                <caption>Browser Support as of September 2014</caption>
+                <thead>
+                <tr>
+                    <th scope="col">Specification</th>
+                    <th scope="col">Chrome</th>
+                    <th scope="col">Opera</th>
+                    <th scope="col">Firefox</th>
+                    <th scope="col">Safari</th>
+                    <th scope="col">IE</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th scope="row">Templates</th>
+                    <td>Yes</td>
+                    <td>Yes</td>
+                    <td>Yes</td>
+                    <td>No</td>
+                    <td>No</td>
+                </tr>
+                <tr>
+                    <th scope="row">HTML Imports</th>
+                    <td>Yes</td>
+                    <td>Yes</td>
+                    <td>Sort of</td>
+                    <td>No</td>
+                    <td>No</td>
+                </tr>
+                <tr>
+                    <th scope="row">Custom Elements</th>
+                    <td>Yes</td>
+                    <td>Yes</td>
+                    <td>Sort of</td>
+                    <td>No</td>
+                    <td>No</td>
+                </tr>
+                <tr>
+                    <th scope="row">Shadow DOM</th>
+                    <td>Yes</td>
+                    <td>Yes</td>
+                    <td>Sort of</td>
+                    <td>No</td>
+                    <td>No</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+<section class="slide shout">
+    <div>
+        <h2>On to the Accessibility!</h2>
+    </div>
+</section>
+
+<section class="slide">
+    <div>
+        <h2>Good News</h2>
+
+        <p>You can totally make these things accessible. This changes nothing from the accessibility perspective.</p>
+        <img src="pictures/dancing-banana.gif" alt="" class="float-right">
+
+    </div>
+</section>
+
+<section class="slide">
+    <div>
+        <h2>Bad News</h2>
+
+        <p>Web Components are the new jQuery plugins</p>
+
+        <div class="next">
+            <img src="pictures/Theodore_Sturgeon.jpg" class="float-right" alt="">
+            <blockquote>
+                90% of <strike>science fiction</strike> <strike>jQuery plugins</strike> Web Components are shit.
+                <div><cite>-- Theodore Sturgeon</cite></div>
+            </blockquote>
+        </div>
+    </div>
+</section>
+
+<section class="slide">
+    <div>
+        <h2>How to do it right</h2>
+        <div class="text-center"><img src="pictures/stop-overthinking-it.png" alt=""></div>
+
+        <div class="offscreen">
+            Picture I borrowed from Steve Faulkner. It says:
+            <blockquote>
+                Something Karl Groves said:
+                I'm writing a new talk titled &quot;Demystifying Web Components Accessibility&quot;. It has one slide.
+                It says &quot;Same as regular ole web accessibility. Seriously. Stop overthinking it&quot;
+            </blockquote>
+        </div>
+    </div>
+</section>
+
+<section class="slide">
+    <div>
+        <h2>First: follow all your standard accessibility best practices</h2>
+        <ul>
+            <li class="next">Semantics and structure</li>
+            <li class="next">Keyboard accessibility and focus control</li>
+            <li class="next">Color contrast</li>
+            <li class="next">Proper labeling and alternative formats</li>
+        </ul>
+    </div>
+</section>
+
+<section class="slide">
+    <div>
+        <h2>Don't reinvent the wheel</h2>
+        <div class="text-center"><a href="https://rawgit.com/alice/web-components-demos/master/index.html">
+            <img src="pictures/extend.png" alt="Great demo of extending an existing element"></a></div>
+    </div>
+</section>
+
+<section class="slide">
+    <div>
+        <h2>Solve Real Problems</h2>
+        <div class="text-center"><a href="http://karlgroves.github.io/image-longdesc/"><img src="pictures/longdesc-example.png"
+                                                                                            alt="Longdesc web component"></a></div>
+    </div>
+</section>
+
+<section class="slide">
+    <div>
+        <h2>Consider the User</h2>
+        <div class="text-center"><a href="https://rawgit.com/karlgroves/bar-graph/accessible/index.html"><img src="pictures/bargraph.png"
+                                                                                                              alt="Example web component"></a></div>
+    </div>
+</section>
+
+<section class="slide">
+    <div>
+        <h2>No, really. Consider the User</h2>
+        <div class="text-center"><a href="http://rawgit.com/stevefaulkner/flipbox/master/demo/testpage.html"><img src="pictures/flipbox-example.gif" alt="Flipbox example component"></a></div>
+    </div>
+</section>
+
+<section class="slide">
+    <div>
+        <h2>Be Creative</h2>
+        <div class="text-center"><a href="https://github.com/karlgroves/image-caption"><img src="pictures/image-caption.png" alt="Example of image-caption" /></a></div>
+    </div>
+</section>
+
+<section class="slide">
+    <div>
+        <h2>WAI-ARIA</h2>
+        <div class="text-center"><a href="https://rawgit.com/karlgroves/csv-preview/accessible/example/index.html"><img
+                src="pictures/csv-table.png" alt="CSV-to-HTML table, fixed by Karl to be accessible"></a></div>
+    </div>
+</section>
+
+<section class="slide">
+    <div>
+        <h2>Some Cautions</h2>
+        <ul>
+            <li><a href="http://lists.w3.org/Archives/Public/public-webapps/2014OctDec/0034.html">There are some wrinkles</a></li>
+            <li><a href="https://code.google.com/p/chromium/issues/detail?id=415419">like some unforseen challenges</a></li>
+            <li><a href="http://www.paciellogroup.com/blog/2014/03/stuff-doesnt-work-dom-shadow-dom/">Don't let the encapsulation trip you up</a> </li>
+        </ul>
+    </div>
+</section>
+
+<section class="slide">
+    <div>
+        <h2>Contact Us</h2>
+
+        <h3>Alic Boxhall</h3>
+        <dl class="dl-sidebyside">
+            <dt>
+                <strong>Phone</strong>
+            </dt>
+            <dd>
+                +1 xxx.xxx.xxxx
+            </dd>
+            <dt>
+                <strong>Email</strong>
+            </dt>
+            <dd>
+                <a href="mailto:aboxhall@google.com">aboxhall@google.com</a>
+            </dd>
+            <dt>
+                <strong>Twitter</strong>
+            </dt>
+            <dd>
+                <a href="https://twitter.com/#!/sundress">@sundress</a>
+            </dd>
+        </dl>
+    </div>
+</section>
+
+<section class="slide">
+    <div>
+        <h2>Contact Us</h2>
+
+        <h3>Karl Groves</h3>
+        <dl class="dl-sidebyside">
+            <dt>
+                <strong>Phone</strong>
+            </dt>
+            <dd>
+                +1 410.541.6829
+            </dd>
+            <dt>
+                <strong>Email</strong>
+            </dt>
+            <dd>
+                <a href="mailto:karl@karlgroves.com">karl@karlgroves.com</a>
+            </dd>
+            <dt>
+                <strong>Work</strong>
+            </dt>
+            <dd>
+                <a href="http://www.paciellogroup.com">The Paciello Group</a>
+            </dd>
+            <dt>
+                <strong>Twitter</strong>
+            </dt>
+            <dd>
+                <a href="https://twitter.com/#!/karlgroves">@karlgroves</a>
+            </dd>
+            <dt>
+                <strong>Blog</strong>
+            </dt>
+            <dd>
+                <a href="http://www.karlgroves.com">karlgroves.com</a>
+            </dd>
+            <dt>
+                <strong>LinkedIn</strong>
+            </dt>
+            <dd>
+                <a href="http://www.linkedin.com/in/karlgroves">http://www.linkedin.com/in/karlgroves</a>
+            </dd>
+        </dl>
+    </div>
+</section>
+
+<section class="slide">
+    <div>
+        <h2>Resources</h2>
+        <ul>
+            <li><a href="https://www.youtube.com/channel/UCmZe7GiM8tY5M8YHSg-Robg">Paciello Group Channel on YouTube</a> </li>
+            <li><a href="https://docs.google.com/presentation/d/1PDFqJZw65pdi9ttQTn57CafjMsW2_mOoOxFel4Negms/edit#slide=id.g479a126d0_066">Steve Faulkner on Web Components</a></li>
+            <li><a href="http://w3c.github.io/webcomponents/explainer/">Introduction to Web Components</a></li>
+            <li><a href="http://www.html5rocks.com/en/tutorials/webcomponents/customelements/">Custom Elements Tutorial
+                (HTML5 Rocks)</a></li>
+            <li><a href="http://w3c.github.io/webcomponents/spec/custom/">Custom Elements Spec</a></li>
+
+        </ul>
+    </div>
+</section>
+
+<section class="slide">
+    <div>
+        <h2>Moar Resources</h2>
+        <ul>
+            <li><a href="http://w3c.github.io/webcomponents/spec/shadow/">Shadow DOM Spec</a></li>
+            <li><a href="http://www.w3.org/html/wg/drafts/html/master/scripting-1.html#the-template-element">Template Element Spec</a></li>
+            <li><a href="http://w3c.github.io/webcomponents/spec/imports/">Imports Spec</a></li>
+            <li><a href="http://www.paciellogroup.com/blog/2014/09/web-components-punch-list/">Web components punch list</a></li>
+            <li><a href="http://bosonic.github.io/">Bosonic</a></li>
+
+        </ul>
+    </div>
+</section>
+
+<section class="slide">
+    <div>
+        <h2>So many Resources</h2>
+        <ul>
+            <li><a href="http://x-tags.org/">X-Tags</a></li>
+            <li><a href="https://www.polymer-project.org/">Polymer</a></li>
+            <li><a href="http://customelements.io/">CustomElements.io</a> showcase of custom elements</li>
+            <li><a href="http://component.kitchen/">Component Kitchen</a></li>
+            <li><a href="http://www.html5rocks.com/en/tutorials/webcomponents/shadowdom/">Shadow DOM 101</a></li>
+        </ul>
+    </div>
+</section>
+
+<section class="slide">
+    <div>
+        <h2>Bonus Material</h2>
+        <iframe width="560" height="315" src="//www.youtube.com/embed/_uq6Db47-Ks" frameborder="0" allowfullscreen title="Modern Web Toolsets & The Next Generation of Accessibility Testing Tools"></iframe>
+    </div>
+</section>
+
+<section class="slide">
+    <div>
+        <h2>Bonus Material</h2>
+        <iframe width="560" height="315" src="//www.youtube.com/embed/vK1tlLOavvM" frameborder="0" allowfullscreen title="Léonie Watson, Design like you give a damn: Practical accessibility for web pros at W3Conf 2013"></iframe>
+    </div>
+</section>
+
+<section class="slide">
+    <div>
+        <h2>Bonus Material</h2>
+        <iframe width="560" height="315" src="//www.youtube.com/embed/l3eb0DALdnA" frameborder="0" allowfullscreen title="Celebrating the ADA's 20th/24th/25th Anniversary"></iframe>
+    </div>
+</section>
+
+<section class="slide">
+    <div>
+        <h2>Bonus Material</h2>
+        <iframe src="//player.vimeo.com/video/84970341" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen title="Understanding DOM and its importance for accessibility, by Karl Groves"></iframe>
+    </div>
+</section>
+
+
 	<!--
 		To hide progress bar from entire presentation
 		just remove “progress” element.
