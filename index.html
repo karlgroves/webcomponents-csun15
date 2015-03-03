@@ -392,6 +392,59 @@ http://commons.wikimedia.org/wiki/File:Mola_mola_Schlegel.jpg
  </div>
 </section>
 
+<section class="slide">
+  <div>
+    <h2>Web Components components</h2>
+    <ul>
+      <li><code>&lt;template&gt;</code>
+      <li class="next">Custom Elements
+      <li class="next">HTML imports
+      <li class="next">Shadow DOM
+    </ul>
+  </div>
+</section>
+
+<section class="slide">
+  <div>
+    <h2><code>&lt;template&gt;</code></h2>
+    <!-- TODO(aboxhall): stamp image -->
+    <pre>
+      <code>&lt;template id="hello"&gt;&lt;p&gt;Hello!&lt;/p&gt;&lt;/template&gt;</code>
+      <code>&lt;script&gt;</code>
+      <code>    document.appendElement(
+        $("#hello").content.cloneNode(true));</code>
+      <code>&lt;/script&gt;</code>
+    </pre>
+  </div>
+</section>
+
+<section class="slide">
+  <div>
+    <h2>Custom elements</h2>
+    <ul>
+      <li>Name
+      <li>Prototype
+      <li>Lifecycle callbacks
+    </ul>
+</section>
+
+<section class="slide">
+  <div>
+    <pre>
+      <code>function GmailButton() {}</code>
+      <code>GmailButton.<mark>prototype</mark> = {</code>
+      <code>  __proto__: HTMLButtonElement.prototype,</code>
+      <code>  <mark>createdCallback</mark>: function() {</code>
+      <code>    this.appendChild($('template').content.cloneNode(true)};</code>
+      <code>  },</code>
+      <code>  <mark>attributeChangedCallback</mark>: function(attr, old, new) { … },</code>
+      <code>  extends: 'button'</code>
+      <code>}</code>
+      <code>document.registerElement(<mark>'gmail-button'</mark>, GmailButton);</code>
+    </pre>
+  </div>
+</section>
+
 
 <section class="slide">
     <div>
