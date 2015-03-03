@@ -1,0 +1,25 @@
+<fulfillmentToken fulfillmentType="buy" xmlns="http://ns.adobe.com/adept">  
+   <distributor>urn:uuid:00000000-0000-0000-0000-000000000001</distributor>  
+   <operatorURL>http://dl.lightningsource.com/fulfillment</operatorURL>  
+   <expiration>2014-10-04T13:05:21-05:00</expiration>  
+   <transaction>NjQgXmGkp7YMC03mpQuIBFe5gjdrdBJmI8J3qJIa3R9dTeYHelmDgJhCaEkGJVQDW4oXsiNm0KGNhmnZnzq6ubbwmQ==</transaction>  
+   <resourceItemInfo>    
+      <resource>urn:uuid:46e16bd5-a028-4600-9979-35543e163fc2</resource>	
+      <resourceItem>1</resourceItem>	
+      <metadata>      
+         <dc:title xmlns:dc="http://purl.org/dc/elements/1.1/"/>      
+         <dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/"/>      
+         <dc:format xmlns:dc="http://purl.org/dc/elements/1.1/"/>      
+         <dc:publisher xmlns:dc="http://purl.org/dc/elements/1.1/"/>    
+      </metadata>    
+      <src>http://ebook.lightningsource.com/TitleDownload/LSCFD.dll?hdlr=ADEPT&amp;oid=MTIwIADDlmPk4TcI4AvhZ3nLpgm6uk+sWFRN8wGmxRPc1Foua/djHGnM6x3niHiENyD6ylGFPGNeZ82IgEsgEnlvDgsfKuzoCKrilujbjKVMHtA7lsO7fFBIooLWgiqe2m7mzHHghIL2mzoTbPvhuTkPkpmnqGwpKu/xyw==</src>    
+      <downloadType>auth</downloadType>  
+   </resourceItemInfo>  
+   <notify>    
+      <notifyURL>http://ebook.lightningsource.com/TitleDownload/LSVendorIF.dll</notifyURL>    
+      <body>	   
+         <oiid>210032419</oiid>    
+      </body>  
+   </notify>
+   <hmac>kpNmdFNwnmHU7kTY0YypTyeeQaU=</hmac>
+</fulfillmentToken>

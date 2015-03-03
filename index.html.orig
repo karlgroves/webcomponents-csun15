@@ -1,13 +1,13 @@
 <!DOCTYPE HTML>
 <html lang="en">
 <head>
-    <title>Web Components: Background, Opportunities and Challenges</title>
+<<<<<<< HEAD
+    <title>Web Components, An Introduction</title>
     <meta charset="utf-8">
     <meta name="robots" content="noindex"/>
     <meta name="viewport" content="width=792, user-scalable=no"/>
     <meta http-equiv="x-ua-compatible" content="ie=edge"/>
     <link rel="stylesheet" href="shower/themes/ribbon/styles/screen.css">
-    <link rel="stylesheet" href="custom/css/io_prettify.css">
     <link rel="stylesheet" href="custom/css/styles.css">
     <link rel="stylesheet" href="custom/css/examples.css">
     <script src="custom/js/jquery-1.10.2.min.js"></script>
@@ -18,6 +18,14 @@
     <!-- Importing Web Component's Polyfill -->
     <script src="bower_components/platform/platform.js"></script>
 
+=======
+	<title>Web Components: Background, Opportunities and Challenges</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=792, user-scalable=no">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<link rel="stylesheet" href="shower/themes/ribbon/styles/screen.css">
+        <link rel="stylesheet" href="custom/css/io_prettify.css">
+>>>>>>> 5e3a8aa18ca8da6f6f28d6dca2a610d68efb4d3e
 </head>
 <body class="list">
 
@@ -39,9 +47,6 @@
     <p>Alice Boxhall, Google.</p>
     <p>Karl Groves, The Paciello Group.</p>
 </header>
-
-
-
 <section class="slide" id="one">
   <style>
     #one {
@@ -133,6 +138,16 @@
   </div>
 </section>
 
+<<<<<<< HEAD
+<section class="slide cover" id="Cover">
+    <div>
+        <h2 class="stroke">Web Components, an Introduction</h2>
+        <p>Alice Boxhall, <a href="http://www.google.com">Google</a> </p>
+        <p>Karl Groves, <a href="http://www.paciellogroup.com">The Paciello Group</a></p>
+    </div>
+</section>
+
+=======
 <section class="slide" id="three">
   <div>
     <style>
@@ -357,7 +372,6 @@ http://commons.wikimedia.org/wiki/File:Mola_mola_Schlegel.jpg
 <section class="slide">
   <div>
     <h2>Introducing Web Components</h2>
-
     <style>
       .slide table td.reusable,
       .slide table td.encapsulated,
@@ -403,64 +417,8 @@ http://commons.wikimedia.org/wiki/File:Mola_mola_Schlegel.jpg
          extensible
          custom web page components
       -->
-    </div>
+ </div>
 </section>
-
-<section class="slide">
-  <div>
-    <h2>Web Components components</h2>
-    <ul>
-      <li><code>&lt;template&gt;</code>
-      <li class="next">Custom Elements
-      <li class="next">HTML imports
-      <li class="next">Shadow DOM
-    </ul>
-  </div>
-</section>
-
-<section class="slide">
-  <div>
-    <h2><code>&lt;template&gt;</code></h2>
-    <!-- TODO(aboxhall): stamp image -->
-    <pre>
-      <code>&lt;template id="hello"&gt;&lt;p&gt;Hello!&lt;/p&gt;&lt;/template&gt;</code>
-      <code>&lt;script&gt;</code>
-      <code>    document.appendElement(
-        $("#hello").content.cloneNode(true));</code>
-      <code>&lt;/script&gt;</code>
-    </pre>
-  </div>
-</section>
-
-<section class="slide">
-  <div>
-    <h2>Custom elements</h2>
-    <ul>
-      <li>Name
-      <li>Prototype
-      <li>Lifecycle callbacks
-    </ul>
-</section>
-
-<section class="slide">
-  <div>
-    <pre>
-      <code>function GmailButton() {}</code>
-      <code>GmailButton.<mark>prototype</mark> = {</code>
-      <code>  __proto__: HTMLButtonElement.prototype,</code>
-      <code>  <mark>createdCallback</mark>: function() {</code>
-      <code>    this.appendChild($('template').content.cloneNode(true)};</code>
-      <code>  },</code>
-      <code>  <mark>attributeChangedCallback</mark>: function(attr, old, new) { … },</code>
-      <code>  extends: 'button'</code>
-      <code>}</code>
-      <code>document.registerElement(<mark>'gmail-button'</mark>, GmailButton);</code>
-    </pre>
-  </div>
-</section>
-
-
-<!--//  @aboxhall I dunno whether you meant to keep this or whether it was left over. I didn't want to delete it during merge if you meant to keep it
 
 
 <section class="slide">
@@ -477,8 +435,8 @@ http://commons.wikimedia.org/wiki/File:Mola_mola_Schlegel.jpg
         <div class="text-center"><a href="https://github.com/ThePacielloGroup/disclosure-button">Disclosure Button</a> </div>
     </div>
 </section>
+>>>>>>> 5e3a8aa18ca8da6f6f28d6dca2a610d68efb4d3e
 
-//-->
 
 
 <!--// Karl's Stuff //-->
@@ -822,12 +780,214 @@ http://commons.wikimedia.org/wiki/File:Mola_mola_Schlegel.jpg
     </div>
 </section>
 
+<<<<<<< HEAD
+<div class="progress">
+    <div></div>
+</div>
+<script src="shower/shower.min.js"></script>
+<script src="custom/js/slide-stuff.js"></script>
+=======
+<section class="slide">
+  <div>
+    <h2>Credits</h2>
+    <div>
+
+      <a title="By Innab (Own work) [CC BY-SA 3.0 (http://creativecommons.org/licenses/by-sa/3.0)], via Wikimedia Commons" href="http://commons.wikimedia.org/wiki/File%3ARubberStamp_blank.jpg"><img width="256" alt="RubberStamp blank" src="//upload.wikimedia.org/wikipedia/commons/d/dc/RubberStamp_blank.jpg"/></a>
+    </div>
+  </div>
+</section>
+
+	<section class="slide cover" id="Cover"><div>
+		<h2>Shower Presentation Engine</h2>
+		<p>Brought to you by <a href="http://pepelsbey.net">Vadim Makeev</a></p>
+		<img src="pictures/cover.jpg" alt="">
+		<!--
+			To apply styles to the certain slides
+			set slide ID to get needed elements
+			-->
+		<style>
+			#Cover h2 {
+				margin:30px 0 0;
+				color:#FFF;
+				text-align:center;
+				font-size:70px;
+				}
+			#Cover p {
+				margin:10px 0 0;
+				text-align:center;
+				color:#FFF;
+				font-style:italic;
+				font-size:20px;
+				}
+				#Cover p a {
+					color:#FFF;
+					}
+		</style>
+	</div></section>
+	<section class="slide"><div>
+		<h2>Shower Key Features</h2>
+		<ol>
+			<li>Built on HTML, CSS and vanilla JavaScript</li>
+			<li>All modern browsers are supported</li>
+			<li>Slide themes are separated from engine</li>
+			<li>Fully keyboard accessible</li>
+			<li>Printable to PDF</li>
+		</ol>
+		<p class="note">Shower ['ʃəuə] noun. A person or thing that shows.</p>
+	</div></section>
+	<section class="slide"><div>
+		<h2>Plain Text on Your Slides</h2>
+		<p>Lorem ipsum dolor sit amet, consectetur <a href="#4">adipisicing</a> elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, <em>quis nostrud</em> exercitation ullamco laboris <strong>nisi ut aliquip</strong> ex ea commodo consequat. Duis aute irure <i>dolor</i> in reprehenderit in voluptate velit esse cillum <b>dolore</b> eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in <code>&lt;culpa&gt;</code> qui officia deserunt mollit anim id est laborum.</p>
+	</div></section>
+	<section class="slide"><div>
+		<h2>All Kind of Lists</h2>
+		<ol>
+			<li>Simple lists are marked with bullets</li>
+			<li>Ordered lists begin with a number</li>
+			<li>You can even nest lists one inside another
+				<ul>
+					<li>Or mix their types</li>
+					<li>But do not go too far</li>
+					<li>Otherwise audience will be bored</li>
+				</ul>
+			</li>
+			<li>Look, seven rows exactly!</li>
+		</ol>
+	</div></section>
+	<section class="slide"><div>
+		<h2>Serious Citations</h2>
+		<figure>
+			<blockquote>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</p>
+			</blockquote>
+			<figcaption>Marcus Tullius Cicero</figcaption>
+		</figure>
+	</div></section>
+	<section class="slide"><div>
+		<h2>Code Samples</h2>
+		<pre>
+			<code>&lt;!DOCTYPE html&gt;</code>
+			<code>&lt;html lang="en"&gt;</code>
+			<code><mark>&lt;head&gt;</mark> <mark class="comment">&lt;!--Comment--&gt;</mark></code>
+			<code>    &lt;title&gt;Shower&lt;/title&gt;</code>
+			<code>    &lt;meta charset="<mark class="important">UTF-8</mark>"&gt;</code>
+			<code>    &lt;link rel="stylesheet" href="screen.css"&gt;</code>
+			<code><mark>&lt;/head&gt;</mark></code>
+		</pre>
+	</div></section>
+	<section class="slide"><div>
+		<h2>Even Tables</h2>
+		<table>
+		<tr>
+			<th scope="col">Locavore</th>
+			<th>Umami</th>
+			<th>Helvetica</th>
+			<th>Vegan</th>
+		</tr>
+		<tr>
+			<th scope="row">Fingerstache</th>
+			<td>Kale</td>
+			<td>Chips</td>
+			<td>Keytar</td>
+		</tr>
+		<tr>
+			<th scope="row">Sriracha</th>
+			<td>Gluten-free</td>
+			<td>Ennui</td>
+			<td>Keffiyeh</td>
+		</tr>
+		<tr>
+			<th scope="row">Thundercats</th>
+			<td>Jean</td>
+			<td>Shorts</td>
+			<td>Biodiesel</td>
+		</tr>
+		<tr>
+			<th scope="row">Terry</th>
+			<td>Richardson</td>
+			<td>Swag</td>
+			<td>Blog</td>
+		</tr>
+		</table>
+		<p>It’s good to have information organized.</p>
+	</div></section>
+	<section class="slide cover" id="Picture"><div>
+		<h2>Pictures</h2>
+		<img src="pictures/picture.jpg" alt="">
+		<style>
+			#Picture h2 {
+				color:#FFF;
+				}
+		</style>
+	</div></section>
+	<section class="slide shout"><div>
+		<h2>You can even shout this way</h2>
+	</div></section>
+	<section class="slide"><div>
+		<h2>Inner Navigation</h2>
+		<ol>
+			<li>Lets you reveal list items one by one</li>
+			<li class="next">To keep some key points</li>
+			<li class="next">In secret from audience</li>
+			<li class="next">But it will work only once</li>
+			<li class="next">Nobody wants to see the same joke twice</li>
+		</ol>
+	</div></section>
+	<section class="slide shout" id="SeeMore"><div>
+		<h2><img src="pictures/logo.svg" alt=""> <a href="https://github.com/shower/shower">See more on GitHub</a></h2>
+		<style>
+			#Picture h2 {
+				color:#FFF;
+				}
+			#SeeMore h2 {
+				font-size:100px
+				}
+			#SeeMore img {
+				width:0.72em;
+				height:0.72em;
+				}
+		</style>
+	</div></section>
+
+<section class="slide">
+    <div>
+        <pre style="font-size: .5em;"><code>&lt;template id="bargraph-template"&gt;
+            &lt;style&gt;/** CSS all the things */&lt;/style&gt;
+            &lt;content&gt;&lt;/content&gt;
+            &lt;/template&gt;
+            &lt;script&gt;
+            var doc = document.currentScript.ownerDocument,
+            BargraphProto = Object.create(HTMLElement.prototype),
+            template = doc.querySelector("#bargraph-template"),
+            graph = template.content.cloneNode(true);
+
+            BargraphProto.createdCallback = function() {
+            // moar stuff here
+
+            var shadow = this.shadow = this.createShadowRoot();
+            this.shadow.appendChild(graph);
+
+            // even moar stuff here
+
+            var Bargraph = doc.registerElement('bar-graph', {
+            'prototype': BargraphProto
+            });
+            &lt;/script&gt;
+        </code></pre>
+        <a href="https://github.com/karlgroves/bar-graph/tree/accessible">Bar Graph (accessible)</a>
+    </div>
+</section>
+</div>
+
+
 	<!--
 		To hide progress bar from entire presentation
 		just remove “progress” element.
 		-->
 	<div class="progress"><div></div></div>
-<script src="shower/shower.min.js"></script>
-<script src="custom/js/slide-stuff.js"></script>
+	<script src="shower/shower.min.js"></script>
+	<!-- Copyright © 2014 Yours Truly, Famous Inc. -->
+	<!-- Photos by John Carey, fiftyfootshadows.net -->
+>>>>>>> 5e3a8aa18ca8da6f6f28d6dca2a610d68efb4d3e
 </body>
 </html>
