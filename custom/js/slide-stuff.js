@@ -1,17 +1,8 @@
 $(document).ready(function () {
     'use strict';
 
-    $("#Cover").backstretch("pictures/utfart.JPG");
-    $("#quicksand").backstretch("pictures/quicksand.gif");
-    $("#widget-challenges").backstretch("pictures/divsoup.png");
-    $("#never-took-off").backstretch("pictures/flight.jpg");
-    $("#objects").backstretch("pictures/uncommon-objects.jpg");
-
-
-    $('#pour ol li strong').each(function () {
-        var el = $(this), text = el.html(), first = text.slice(0, 1), rest = text.slice(1);
-        el.html("<span class='firstletter'>" + first + "</span>" + rest);
-    });
+    //
+    //$("#Cover").backstretch("pictures/utfart.JPG");
 
     $('.inline-example').each(function () {
         var theSrc = '../examples/' + $(this).attr('data-source') + '.html';
@@ -93,14 +84,4 @@ $(document).ready(function () {
         }
     );
 
-    $('#chosen').addVideoJS(
-        {
-            id: 'custom_widgets'
-        },
-        {
-            mp4: '/slides/videos/CustomUIWidgetAccessibilityProblems.mp4',
-            ogg: '/slides/videos/CustomUIWidgetAccessibilityProblems.ogv',
-            webm: '/slides/videos/CustomUIWidgetAccessibilityProblems.webm'
-        }
-    );
 });
