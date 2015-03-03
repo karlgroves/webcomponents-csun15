@@ -6,6 +6,7 @@
 	<meta name="viewport" content="width=792, user-scalable=no">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
 	<link rel="stylesheet" href="shower/themes/ribbon/styles/screen.css">
+        <link rel="stylesheet" href="custom/css/io_prettify.css">
 </head>
 <body class="list">
 
@@ -28,187 +29,369 @@
     <p>Alice Boxhall, Google<br>
     Karl Groves, The Paciello Group</p>
 </header>
+<section class="slide" id="one">
+  <style>
+    #one {
+    background-image: url("pictures/architect_tools.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    }
+    #one h2 {
+    margin-top: 105px;
+    padding-left: 120px;
+    color: #fff;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    line-height: 200%;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.6);
+    }
+  </style>
+  <h2>Re-imagining the web</h2>
+  <!-- Web Components represent an upcoming paradigm shift for the way we build HTML web sites. -->
+</section>
+<section class="slide" id="two">
+  <style>
+    #two .row {
+    display: flex;
+    flex-row: row;
+    }
 
-	<section class="slide cover" id="Cover"><div>
-		<h2>Shower Presentation Engine</h2>
-		<p>Brought to you by <a href="http://pepelsbey.net">Vadim Makeev</a></p>
-		<img src="pictures/cover.jpg" alt="">
-		<!--
-			To apply styles to the certain slides
-			set slide ID to get needed elements
-			-->
-		<style>
-			#Cover h2 {
-				margin:30px 0 0;
-				color:#FFF;
-				text-align:center;
-				font-size:70px;
-				}
-			#Cover p {
-				margin:10px 0 0;
-				text-align:center;
-				color:#FFF;
-				font-style:italic;
-				font-size:20px;
-				}
-				#Cover p a {
-					color:#FFF;
-					}
-		</style>
-	</div></section>
-	<section class="slide"><div>
-		<h2>Shower Key Features</h2>
-		<ol>
-			<li>Built on HTML, CSS and vanilla JavaScript</li>
-			<li>All modern browsers are supported</li>
-			<li>Slide themes are separated from engine</li>
-			<li>Fully keyboard accessible</li>
-			<li>Printable to PDF</li>
-		</ol>
-		<p class="note">Shower ['ʃəuə] noun. A person or thing that shows.</p>
-	</div></section>
-	<section class="slide"><div>
-		<h2>Plain Text on Your Slides</h2>
-		<p>Lorem ipsum dolor sit amet, consectetur <a href="#4">adipisicing</a> elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, <em>quis nostrud</em> exercitation ullamco laboris <strong>nisi ut aliquip</strong> ex ea commodo consequat. Duis aute irure <i>dolor</i> in reprehenderit in voluptate velit esse cillum <b>dolore</b> eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in <code>&lt;culpa&gt;</code> qui officia deserunt mollit anim id est laborum.</p>
-	</div></section>
-	<section class="slide"><div>
-		<h2>All Kind of Lists</h2>
-		<ol>
-			<li>Simple lists are marked with bullets</li>
-			<li>Ordered lists begin with a number</li>
-			<li>You can even nest lists one inside another
-				<ul>
-					<li>Or mix their types</li>
-					<li>But do not go too far</li>
-					<li>Otherwise audience will be bored</li>
-				</ul>
-			</li>
-			<li>Look, seven rows exactly!</li>
-		</ol>
-	</div></section>
-	<section class="slide"><div>
-		<h2>Serious Citations</h2>
-		<figure>
-			<blockquote>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</p>
-			</blockquote>
-			<figcaption>Marcus Tullius Cicero</figcaption>
-		</figure>
-	</div></section>
-	<section class="slide"><div>
-		<h2>Code Samples</h2>
-		<pre>
-			<code>&lt;!DOCTYPE html&gt;</code>
-			<code>&lt;html lang="en"&gt;</code>
-			<code><mark>&lt;head&gt;</mark> <mark class="comment">&lt;!--Comment--&gt;</mark></code>
-			<code>    &lt;title&gt;Shower&lt;/title&gt;</code>
-			<code>    &lt;meta charset="<mark class="important">UTF-8</mark>"&gt;</code>
-			<code>    &lt;link rel="stylesheet" href="screen.css"&gt;</code>
-			<code><mark>&lt;/head&gt;</mark></code>
-		</pre>
-	</div></section>
-	<section class="slide"><div>
-		<h2>Even Tables</h2>
-		<table>
-		<tr>
-			<th scope="col">Locavore</th>
-			<th>Umami</th>
-			<th>Helvetica</th>
-			<th>Vegan</th>
-		</tr>
-		<tr>
-			<th scope="row">Fingerstache</th>
-			<td>Kale</td>
-			<td>Chips</td>
-			<td>Keytar</td>
-		</tr>
-		<tr>
-			<th scope="row">Sriracha</th>
-			<td>Gluten-free</td>
-			<td>Ennui</td>
-			<td>Keffiyeh</td>
-		</tr>
-		<tr>
-			<th scope="row">Thundercats</th>
-			<td>Jean</td>
-			<td>Shorts</td>
-			<td>Biodiesel</td>
-		</tr>
-		<tr>
-			<th scope="row">Terry</th>
-			<td>Richardson</td>
-			<td>Swag</td>
-			<td>Blog</td>
-		</tr>
-		</table>
-		<p>It’s good to have information organized.</p>
-	</div></section>
-	<section class="slide cover" id="Picture"><div>
-		<h2>Pictures</h2>
-		<img src="pictures/picture.jpg" alt="">
-		<style>
-			#Picture h2 {
-				color:#FFF;
-				}
-		</style>
-	</div></section>
-	<section class="slide shout"><div>
-		<h2>You can even shout this way</h2>
-	</div></section>
-	<section class="slide"><div>
-		<h2>Inner Navigation</h2>
-		<ol>
-			<li>Lets you reveal list items one by one</li>
-			<li class="next">To keep some key points</li>
-			<li class="next">In secret from audience</li>
-			<li class="next">But it will work only once</li>
-			<li class="next">Nobody wants to see the same joke twice</li>
-		</ol>
-	</div></section>
-	<section class="slide shout" id="SeeMore"><div>
-		<h2><img src="pictures/logo.svg" alt=""> <a href="https://github.com/shower/shower">See more on GitHub</a></h2>
-		<style>
-			#Picture h2 {
-				color:#FFF;
-				}
-			#SeeMore h2 {
-				font-size:100px
-				}
-			#SeeMore img {
-				width:0.72em;
-				height:0.72em;
-				}
-		</style>
-	</div></section>
+    #two .column + .column {
+    margin-left: 30px;
+    }
+
+    #two td + td {
+    padding-left: 30px;
+    }
+  </style>
+  <div>
+    <h2>HTML today</h2>
+    <div class="row">
+      <div class="column">
+        <table>
+          <tr>
+            <td>Root element</td><td>1</td>
+          </tr>
+          <tr>
+            <td>Document metadata</td><td>6</td>
+          </tr>
+          <tr>
+            <td>Scripting</td><td>2</td>
+          </tr>
+          <tr>
+            <td>Sections</td><td>10<sup>1</sup></td>
+          </tr>
+          <tr>
+            <td>Grouping</td><td>14</td>
+          </tr>
+          <tr>
+            <td>Text-level semantics</td><td>26</td>
+          </tr>
+        </table>
+      </div>
+      <div class="column">
+        <table>
+          <tr>
+            <td>Edits</td><td>2</td>
+          </tr>
+          <tr>
+            <td>Embedded content</td><td>12</td>
+          </tr>
+          <tr>
+            <td>Tables</td><td>10</td>
+          </tr>
+          <tr>
+            <td>Forms</td><td>14 + 23<sup>2</sup></td>
+          </tr>
+          <tr>
+            <td>"Interactive elements"</td><td>4</td>
+          <tr>
+          <tr>
+            <td><strong>Total</strong></td><td><strong>124</strong></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <!-- Finite set of elements with well-defined semantics -->
+    <p class="note">1. Counting all headings as one type<br>
+      2. 23 types of <code>&lt;input&gt;</code></p>
+    </div>
+  </div>
+</section>
+
+<section class="slide" id="three">
+  <div>
+    <style>
+      .layout-center{
+      margin:0 auto;
+      width: -moz-max-content;
+      width: -webkit-max-content;
+      }
+
+      #three img + img {
+      margin-left: 50px;
+      }
+
+      #three img {
+      box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.7);
+      }
+    </style>
+    <h2>HTML today</h2>
+    <div class="layout-center">
+      <img alt="date input on iOS" src="pictures/input_ios.png" >
+      <img alt="date input on Android" src="pictures/input_android.png">
+    </div>
+    <!-- can use <input type="checkbox"> and rely on certain behaviour on any platform or device
+         This is a great thing! -->
+  </div>
+</section>
+
+<section class="slide" id="four">
+  <div>
+    <style>
+        #four .row {
+        display: flex;
+        flex-row: row;
+        }
+
+        #four .column div + div {
+        margin-top: 50px;
+        padding-bottom: 50px;
+        }
+
+        #four .column + .column {
+        margin-left: 30px;
+        }
+
+        #four .layout-center-vertical {
+        margin: auto auto;
+        height: -moz-max-content;
+        height: -webkit-max-content;
+        }
+    </style>
+
+    <h2>HTML today</h2>
+    <div class="row">
+      <div class="column layout-center-vertical">
+        <div>
+          <img alt="tabs on google.com" src="pictures/google%20tabs.png">
+        </div>
+        <div>
+          <img alt="tabs on twitter.com" src="pictures/twitter%20tabs.png">
+        </div>
+      </div>
+      <div class="column">
+        <img alt="tabs on github.com" src="pictures/github%20tabs.png">
+      </div>
+    </div>
+    <!-- TODO(aboxhall): screenshots of various implementations of a tab UI pattern
+         - github
+         - twitter (home/notifications/etc)
+         - google search results
+      -->
+    <!-- What about when we need to do something HTML doesn't know how to do?
+         There's no <toolbar> element (yet), but we keep needing to make toolbars in HTML
+      -->
+  </div>
+</section>
+
+<section class="slide" id="five">
+  <style>
+    #five h2 {
+    margin: 0 0 10px;
+    }
+  </style>
+  <div>
+    <h2>HTML today</h2>
+    <h3>It's <code>&lt;div&gt;</code>s all the way down!</h3>
+    <img alt="screenshot of Google Docs DOM" src="pictures/divs%20all%20the%20way%20down.png" width="938px" height="375px">
+
+  </div>
+</section>
+
+<!-- TODO(aboxhall): selectors?
+<section class="slide">
+  <div>
+    <h2>HTML today</h2>
+    <h3>
+  </div>
+</section>
+-->
 
 <section class="slide">
-    <div>
-        <pre style="font-size: .5em;"><code>&lt;template id="bargraph-template"&gt;
-            &lt;style&gt;/** CSS all the things */&lt;/style&gt;
-            &lt;content&gt;&lt;/content&gt;
-            &lt;/template&gt;
-            &lt;script&gt;
-            var doc = document.currentScript.ownerDocument,
-            BargraphProto = Object.create(HTMLElement.prototype),
-            template = doc.querySelector("#bargraph-template"),
-            graph = template.content.cloneNode(true);
-
-            BargraphProto.createdCallback = function() {
-            // moar stuff here
-
-            var shadow = this.shadow = this.createShadowRoot();
-            this.shadow.appendChild(graph);
-
-            // even moar stuff here
-
-            var Bargraph = doc.registerElement('bar-graph', {
-            'prototype': BargraphProto
-            });
-            &lt;/script&gt;
-        </code></pre>
-        <a href="https://github.com/karlgroves/bar-graph/tree/accessible">Bar Graph (accessible)</a>
-    </div>
+  <div>
+    <h2>HTML evolves</h2>
+    <img alt="Chromium dashboard showing intent to implement getComputedName and getComputedValue" src="pictures/Chromium%20Dashboard.png" width="800px;" height="371px">
+    <!-- New elements, and thus new capabilities do get added. This typically happens in a somewhat "bottom-up" fashion - the spec writers don't sit around speculating about what might be useful, they observe problems that developers are solving time and time again and writing libraries to fix, and distil useful patterns. -->
+  </div>
 </section>
+
+<section class="slide" id="seven">
+  <style>
+    #seven > div{
+    background-image: url("pictures/Mola_mola.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-y: top;
+    background-position-x: 80%;
+    }
+  </style>
+  <div>
+    <h2>HTML evolves... slowly</h2>
+    <!-- It takes time for patterns to emerge, and once they do, figuring out all of the implications and nuances is hard, and it takes time.
+http://commons.wikimedia.org/wiki/File:Mola_mola_Schlegel.jpg
+-->
+  </div>
+</section>
+
+<section class="slide" id="eight">
+  <style>
+    #eight {
+    background-image: url("pictures/alphabet_soup.jpg"); /* https://www.flickr.com/photos/wainwright/380578681/ */
+    background-repeat: no-repeat;
+    background-size: cover;
+    }
+    #eight h2 {
+    margin-top: 105px;
+    padding-left: 120px;
+    width: 100%;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.6);
+    line-height: 200%;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.6);
+    }
+  </style>
+  <h2>Meanwhile...</h2>
+  <!-- We're stuck with div soup! -->
+</section>
+
+<section class="slide" id="nine">
+  <style>
+    #nine {
+    background-image: url("pictures/goat_shadow_puppet.gif");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center right;
+    }
+
+    #nine pre, #ten pre {
+    background-color: rgba(255, 255, 255, 0.7);
+    padding-left: 15px;
+    border-radius: 5px;
+    }
+  </style>
+
+  <div>
+    <h2>Semantics</h2>
+    <!-- TODO(aboxhall): devtools screenshot again side-by-side with rendered presentation -->
+    <!-- TODO(aboxhall): shadow puppet image -->
+    <!-- All these novel UI patterns have implicit semantics: mostly communicated via visual styling and mouse behaviour. We end up with something like a game of shadow puppets - putting together some general purpose elements and behaviour to recreate the experience we want. But if we look at the code, all we see is a meaningless jumble.
+
+         https://www.flickr.com/photos/double-m2/3945354161/ -->
+    <img alt="screenshot of GitHub Code tab" src="pictures/github_code_tab.png" width="190px;" height="58px;">
+    <pre class="theme-light prettyprint prettyprinted" style="">
+<span class="tag">&lt;a</span>
+<span class="pln"> </span>
+<span class="atn">href</span><span class="pun">=</span><span class="atv">"..."</span>
+<span class="pln"> </span>
+<span class="atn">class</span><span class="pun">=</span><span class="atv">"selected sunken-menu-item"</span><span class="tag">&gt;</span>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;span</span>
+<span class="pln"> </span>
+<span class="atn">class</span><span class="pun">=</span><span class="atv">"octicon octicon-code"</span><span class="tag">&gt;&lt;/span&gt;</span>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;span</span>
+<span class="pln"> </span>
+<span class="atn">class</span><span class="pun">=</span><span class="atv">"full-word"</span><span class="tag">&gt;</span><span class="pln">Code</span><span class="tag">&lt;/span&gt;</span>
+<br>
+<span class="pln">
+        </span>
+<span class="tag">&lt;/a&gt;</span></pre>
+  </div>
+</section>
+
+<section class="slide" id="ten">
+  <style>
+    #ten h2 {
+    text-shadow: 2px 2px 2px rgba(255, 255, 255, 0.5);
+    }
+
+    #ten {
+    background-image: url("pictures/Mountain_Goat.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    }
+
+    #ten pre {
+    display: inline-block;
+    padding-right: 15px;
+    }
+
+  </style>
+
+  <div>
+    <!-- TODO(aboxhall): devtools screenshot again side-by-side with rendered presentation -->
+    <!-- TODO(aboxhall): shadow puppet image -->
+    <!-- All these novel UI patterns have implicit semantics: mostly communicated via visual styling and mouse behaviour. We end up with something like a game of shadow puppets - putting together some general purpose elements and behaviour to recreate the experience we want. But if we look at the code, all we see is a meaningless jumble.
+
+         https://www.flickr.com/photos/double-m2/3945354161/ -->
+<pre class="theme-light prettyprint prettyprinted" style=""><span class="tag">&lt;gh-tab</span><span class="pln"> </span><span class="atn">selected</span><span class="pun">=</span><span class="atv">"true"</span><span class="pln"> </span><span class="atn">icon</span><span class="pun">=</span><span class="atv">"code"</span><span class="tag">&gt;</span><span class="pln">Code</span><span class="tag">&lt;/gh-tab&gt;</span></pre>
+  </div>
+</section>
+
+<section class="slide">
+  <div>
+    <h2>Introducing Web Components</h2>
+    <style>
+      .slide table td.reusable,
+      .slide table td.encapsulated,
+      .slide table td.composeable,
+      .slide table td.extensible {
+      background-repeat: no-repeat;
+      background-position: center bottom;
+      height: 200px;
+      width: 300px;
+      }
+
+      .slide table td.reusable {
+      background-image: url("pictures/RubberStamp_blank.jpg");
+      }
+
+      .slide table td.encapsulated {
+      background-image: url("pictures/NCI_peas_in_pod_300.jpg");
+      }
+
+      .slide table td.composeable {
+      background-image: url("pictures/wooden-blocks.JPG");
+      }
+
+      .slide table td.extensible {
+      background-image: url("pictures/Inco_Ladder.jpg");
+      }
+    </style>
+    <table role="presentation">
+      <tr>
+        <td class="reusable">Reusable</td>
+        <td class="encapsulated">Encapsulated</td>
+      </tr>
+      <tr>
+        <td class="composeable">Composeable</td>
+        <td class="extensible">Extensible</td>
+      </tr>
+    </table>
+
+    <!-- Client-side technology for
+         reusable
+         encapsulated
+         composeable
+         extensible
+         custom web page components
+      -->
+ </div>
+</section>
+
 
 <section class="slide">
     <div>
@@ -557,6 +740,198 @@
         <iframe src="//player.vimeo.com/video/84970341" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen title="Understanding DOM and its importance for accessibility, by Karl Groves"></iframe>
     </div>
 </section>
+
+<section class="slide">
+  <div>
+    <h2>Credits</h2>
+    <div>
+
+      <a title="By Innab (Own work) [CC BY-SA 3.0 (http://creativecommons.org/licenses/by-sa/3.0)], via Wikimedia Commons" href="http://commons.wikimedia.org/wiki/File%3ARubberStamp_blank.jpg"><img width="256" alt="RubberStamp blank" src="//upload.wikimedia.org/wikipedia/commons/d/dc/RubberStamp_blank.jpg"/></a>
+    </div>
+  </div>
+</section>
+
+	<section class="slide cover" id="Cover"><div>
+		<h2>Shower Presentation Engine</h2>
+		<p>Brought to you by <a href="http://pepelsbey.net">Vadim Makeev</a></p>
+		<img src="pictures/cover.jpg" alt="">
+		<!--
+			To apply styles to the certain slides
+			set slide ID to get needed elements
+			-->
+		<style>
+			#Cover h2 {
+				margin:30px 0 0;
+				color:#FFF;
+				text-align:center;
+				font-size:70px;
+				}
+			#Cover p {
+				margin:10px 0 0;
+				text-align:center;
+				color:#FFF;
+				font-style:italic;
+				font-size:20px;
+				}
+				#Cover p a {
+					color:#FFF;
+					}
+		</style>
+	</div></section>
+	<section class="slide"><div>
+		<h2>Shower Key Features</h2>
+		<ol>
+			<li>Built on HTML, CSS and vanilla JavaScript</li>
+			<li>All modern browsers are supported</li>
+			<li>Slide themes are separated from engine</li>
+			<li>Fully keyboard accessible</li>
+			<li>Printable to PDF</li>
+		</ol>
+		<p class="note">Shower ['ʃəuə] noun. A person or thing that shows.</p>
+	</div></section>
+	<section class="slide"><div>
+		<h2>Plain Text on Your Slides</h2>
+		<p>Lorem ipsum dolor sit amet, consectetur <a href="#4">adipisicing</a> elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, <em>quis nostrud</em> exercitation ullamco laboris <strong>nisi ut aliquip</strong> ex ea commodo consequat. Duis aute irure <i>dolor</i> in reprehenderit in voluptate velit esse cillum <b>dolore</b> eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in <code>&lt;culpa&gt;</code> qui officia deserunt mollit anim id est laborum.</p>
+	</div></section>
+	<section class="slide"><div>
+		<h2>All Kind of Lists</h2>
+		<ol>
+			<li>Simple lists are marked with bullets</li>
+			<li>Ordered lists begin with a number</li>
+			<li>You can even nest lists one inside another
+				<ul>
+					<li>Or mix their types</li>
+					<li>But do not go too far</li>
+					<li>Otherwise audience will be bored</li>
+				</ul>
+			</li>
+			<li>Look, seven rows exactly!</li>
+		</ol>
+	</div></section>
+	<section class="slide"><div>
+		<h2>Serious Citations</h2>
+		<figure>
+			<blockquote>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</p>
+			</blockquote>
+			<figcaption>Marcus Tullius Cicero</figcaption>
+		</figure>
+	</div></section>
+	<section class="slide"><div>
+		<h2>Code Samples</h2>
+		<pre>
+			<code>&lt;!DOCTYPE html&gt;</code>
+			<code>&lt;html lang="en"&gt;</code>
+			<code><mark>&lt;head&gt;</mark> <mark class="comment">&lt;!--Comment--&gt;</mark></code>
+			<code>    &lt;title&gt;Shower&lt;/title&gt;</code>
+			<code>    &lt;meta charset="<mark class="important">UTF-8</mark>"&gt;</code>
+			<code>    &lt;link rel="stylesheet" href="screen.css"&gt;</code>
+			<code><mark>&lt;/head&gt;</mark></code>
+		</pre>
+	</div></section>
+	<section class="slide"><div>
+		<h2>Even Tables</h2>
+		<table>
+		<tr>
+			<th scope="col">Locavore</th>
+			<th>Umami</th>
+			<th>Helvetica</th>
+			<th>Vegan</th>
+		</tr>
+		<tr>
+			<th scope="row">Fingerstache</th>
+			<td>Kale</td>
+			<td>Chips</td>
+			<td>Keytar</td>
+		</tr>
+		<tr>
+			<th scope="row">Sriracha</th>
+			<td>Gluten-free</td>
+			<td>Ennui</td>
+			<td>Keffiyeh</td>
+		</tr>
+		<tr>
+			<th scope="row">Thundercats</th>
+			<td>Jean</td>
+			<td>Shorts</td>
+			<td>Biodiesel</td>
+		</tr>
+		<tr>
+			<th scope="row">Terry</th>
+			<td>Richardson</td>
+			<td>Swag</td>
+			<td>Blog</td>
+		</tr>
+		</table>
+		<p>It’s good to have information organized.</p>
+	</div></section>
+	<section class="slide cover" id="Picture"><div>
+		<h2>Pictures</h2>
+		<img src="pictures/picture.jpg" alt="">
+		<style>
+			#Picture h2 {
+				color:#FFF;
+				}
+		</style>
+	</div></section>
+	<section class="slide shout"><div>
+		<h2>You can even shout this way</h2>
+	</div></section>
+	<section class="slide"><div>
+		<h2>Inner Navigation</h2>
+		<ol>
+			<li>Lets you reveal list items one by one</li>
+			<li class="next">To keep some key points</li>
+			<li class="next">In secret from audience</li>
+			<li class="next">But it will work only once</li>
+			<li class="next">Nobody wants to see the same joke twice</li>
+		</ol>
+	</div></section>
+	<section class="slide shout" id="SeeMore"><div>
+		<h2><img src="pictures/logo.svg" alt=""> <a href="https://github.com/shower/shower">See more on GitHub</a></h2>
+		<style>
+			#Picture h2 {
+				color:#FFF;
+				}
+			#SeeMore h2 {
+				font-size:100px
+				}
+			#SeeMore img {
+				width:0.72em;
+				height:0.72em;
+				}
+		</style>
+	</div></section>
+
+<section class="slide">
+    <div>
+        <pre style="font-size: .5em;"><code>&lt;template id="bargraph-template"&gt;
+            &lt;style&gt;/** CSS all the things */&lt;/style&gt;
+            &lt;content&gt;&lt;/content&gt;
+            &lt;/template&gt;
+            &lt;script&gt;
+            var doc = document.currentScript.ownerDocument,
+            BargraphProto = Object.create(HTMLElement.prototype),
+            template = doc.querySelector("#bargraph-template"),
+            graph = template.content.cloneNode(true);
+
+            BargraphProto.createdCallback = function() {
+            // moar stuff here
+
+            var shadow = this.shadow = this.createShadowRoot();
+            this.shadow.appendChild(graph);
+
+            // even moar stuff here
+
+            var Bargraph = doc.registerElement('bar-graph', {
+            'prototype': BargraphProto
+            });
+            &lt;/script&gt;
+        </code></pre>
+        <a href="https://github.com/karlgroves/bar-graph/tree/accessible">Bar Graph (accessible)</a>
+    </div>
+</section>
+</div>
 
 
 	<!--
