@@ -21,9 +21,9 @@
 .theme-light pre { font-family: Inconsolata; font-size: 40px; }
 .theme-light .pln { color: #000 }  /* plain text */
 .theme-light .str,
-.theme-light .atv { color: #0f9d58 }  /* string content and attribute value */
+.theme-light .atv { color: #0b884c }  /* string content and attribute value */
 .theme-light .kwd,
-.theme-light .tag { color: #4285f4;  }  /* a keyword or tag */
+.theme-light .tag { color: #3974d6;  }  /* a keyword or tag */
 .theme-light .com { color: #999 }  /* a comment */
 .theme-light .typ,
 .theme-light .var { color: #673ab7 }  /* a type name or xq variable */
@@ -31,7 +31,7 @@
 .theme-light .pun,
 .theme-light .opn,
 .theme-light .clo { color: #a3a3a3 } /* punctuation, lisp open bracket, lisp close bracket */
-.theme-light .atn { color: #e91e63 }  /* a markup attribute name */
+.theme-light .atn { color: #e41d61 }  /* a markup attribute name */
 .theme-light .dec,
 .theme-light .var { color: #e67c73 }  /* a declaration like doctype */
 .theme-light .fun { color: #fff }  /* a function name */

@@ -35,22 +35,39 @@
             If all else fails, you can also access the slideshow content by turning off CSS and JavaScript.
         </p>
     </div>
-    <h1>Web Components, an Introduction</h1>
-    <p>Alice Boxhall, Google.</p>
-    <p>Karl Groves, The Paciello Group.</p>
 </header>
 
-
-
-<section class="slide" id="one">
+<section class="slide cover" id="title">
   <style>
-    #one {
+    #title h1, #title h3, #title p {
+    color: #fff;
+    }
+    #title h1 {
+    font-size: 100px;
+    line-height: 100px;
+    }
+    #title .subhead {
+    font-size: 30px;
+    font-style: italic;
+    }
+  </style>
+  <div>
+    <h1>Web Components: An Introduction</h1>
+    <p class="subhead">What they are, how they work, and their challenges</p>
+    <p>Alice Boxhall, Google</p>
+    <p>Karl Groves, The Paciello Group</p>
+  </div>
+</section>
+
+<section class="slide" id="reimagining">
+  <style>
+    #reimagining {
     background-image: url("pictures/architect_tools.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: bottom;
     }
-    #one h2 {
+    #reimagining h2 {
     margin-top: 105px;
     padding-left: 120px;
     color: #fff;
@@ -63,18 +80,19 @@
   <h2>Re-imagining the web</h2>
   <!-- Web Components represent an upcoming paradigm shift for the way we build HTML web sites. -->
 </section>
-<section class="slide" id="two">
+<section class="slide" id="today">
   <style>
-    #two .row {
+    #today .row {
     display: flex;
     flex-row: row;
+    margin: auto;
     }
 
-    #two .column + .column {
+    #today .column + .column {
     margin-left: 30px;
     }
 
-    #two td + td {
+    #today td + td {
     padding-left: 30px;
     }
   </style>
@@ -133,7 +151,7 @@
   </div>
 </section>
 
-<section class="slide" id="three">
+<section class="slide" id="today-2">
   <div>
     <style>
       .layout-center{
@@ -142,15 +160,32 @@
       width: -webkit-max-content;
       }
 
-      #three img + img {
+      #today-2 img + img {
       margin-left: 50px;
       }
 
-      #three img {
+      #today-2 h2 {
+      margin-bottom: 0;
+      }
+
+      #today-2 div {
+      line-height: 1em;
+      padding-bottom: 10px;
+      }
+
+      #today-2 input[type=time] {
+      font-size: 100%;
+      }
+
+      #today-2 img {
       box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.7);
       }
     </style>
     <h2>HTML today</h2>
+    <div class="layout-center">
+      <input type="time">
+    </div>
+
     <div class="layout-center">
       <img alt="date input on iOS" src="pictures/input_ios.png" >
       <img alt="date input on Android" src="pictures/input_android.png">
@@ -160,24 +195,24 @@
   </div>
 </section>
 
-<section class="slide" id="four">
+<section class="slide" id="today-3">
   <div>
     <style>
-        #four .row {
+        #today-3 .row {
         display: flex;
         flex-row: row;
         }
 
-        #four .column div + div {
+        #today-3 .column div + div {
         margin-top: 50px;
         padding-bottom: 50px;
         }
 
-        #four .column + .column {
+        #today-3 .column + .column {
         margin-left: 30px;
         }
 
-        #four .layout-center-vertical {
+        #today-3 .layout-center-vertical {
         margin: auto auto;
         height: -moz-max-content;
         height: -webkit-max-content;
@@ -209,9 +244,9 @@
   </div>
 </section>
 
-<section class="slide" id="five">
+<section class="slide" id="today-4">
   <style>
-    #five h2 {
+    #today-4 h2 {
     margin: 0 0 10px;
     }
   </style>
@@ -240,9 +275,9 @@
   </div>
 </section>
 
-<section class="slide" id="seven">
+<section class="slide" id="slowly">
   <style>
-    #seven > div{
+    #slowly > div{
     background-image: url("pictures/Mola_mola.jpg");
     background-repeat: no-repeat;
     background-size: contain;
@@ -258,14 +293,14 @@ http://commons.wikimedia.org/wiki/File:Mola_mola_Schlegel.jpg
   </div>
 </section>
 
-<section class="slide" id="eight">
+<section class="slide" id="soup">
   <style>
-    #eight {
+    #soup {
     background-image: url("pictures/alphabet_soup.jpg"); /* https://www.flickr.com/photos/wainwright/380578681/ */
     background-repeat: no-repeat;
     background-size: cover;
     }
-    #eight h2 {
+    #soup h2 {
     margin-top: 105px;
     padding-left: 120px;
     width: 100%;
@@ -279,16 +314,16 @@ http://commons.wikimedia.org/wiki/File:Mola_mola_Schlegel.jpg
   <!-- We're stuck with div soup! -->
 </section>
 
-<section class="slide" id="nine">
+<section class="slide" id="semantics">
   <style>
-    #nine {
+    #semantics {
     background-image: url("pictures/goat_shadow_puppet.gif");
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center right;
     }
 
-    #nine pre, #ten pre {
+    #semantics pre, #goat pre {
     background-color: rgba(255, 255, 255, 0.7);
     padding-left: 15px;
     border-radius: 5px;
@@ -324,20 +359,20 @@ http://commons.wikimedia.org/wiki/File:Mola_mola_Schlegel.jpg
   </div>
 </section>
 
-<section class="slide" id="ten">
+<section class="slide" id="goat">
   <style>
-    #ten h2 {
+    #goat h2 {
     text-shadow: 2px 2px 2px rgba(255, 255, 255, 0.5);
     }
 
-    #ten {
+    #goat {
     background-image: url("pictures/Mountain_Goat.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     }
 
-    #ten pre {
+    #goat pre {
     display: inline-block;
     padding-right: 15px;
     }
@@ -408,9 +443,31 @@ http://commons.wikimedia.org/wiki/File:Mola_mola_Schlegel.jpg
 
 <section class="slide">
   <div>
+      <pre class="theme-light prettyprint prettyprinted" style=""><span class="tag">&lt;link</span><span class="pln"> </span><span class="atn">rel</span><span class="pun">=</span><span class="atv">"import"</span><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="atv">"gmail-widgets.html"</span><span class="tag">&gt;</span><span class="pln"><br>
+          ...<br>
+        </span><span class="tag">&lt;gmail-app&gt;</span><br>
+        <span class="pln">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="tag">&lt;gmail-folderlist&gt;</span><span class="pln">...</span><span class="tag">&lt;/gmail-folderlist&gt;</span><br>
+        <span class="pln">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="tag">&lt;gmail-toolbar&gt;</span><br>
+        <span class="pln">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="tag">&lt;gmail-buttongroup&gt;</span><br>
+        <span class="pln">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp</span><span class="tag">&lt;button</span><span class="pln"> </span><span class="atn">is</span><span class="pun">=</span><span class="atv">"gmail-button"</span><span class="pln"> </span><span class="atn">icon</span><span class="pun">=</span><span class="atv">"return"</span><span class="pln"> </span><span class="atn">action</span><span class="pun">=</span><span class="atv">"back"</span><span class="pln">
+        </span><span class="atn">tip</span><span class="pun">=</span><span class="atv">"Back to search results"</span><span class="tag">&gt;&lt;/button&gt;</span><br>
+        <span class="pln">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="tag">&lt;gmail-buttongroup&gt;</span>
+      </pre>
+    </div>
+</section>
+
+<section class="slide" id="components">
+  <style>
+    #components {
+    background-image: url("pictures/Component-cables.jpg");
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    }
+  </style>
+  <div>
     <h2>Web Components components</h2>
     <ul>
-      <li><code>&lt;template&gt;</code>
+      <li class="next"><code>&lt;template&gt;</code>
       <li class="next">Custom Elements
       <li class="next">HTML imports
       <li class="next">Shadow DOM
@@ -418,28 +475,91 @@ http://commons.wikimedia.org/wiki/File:Mola_mola_Schlegel.jpg
   </div>
 </section>
 
-<section class="slide">
+<section class="slide" id="template">
+  <style>
+    pre.no-line-numbers > code:before {
+    content: none;
+    }
+    #template {
+    background-image: url("pictures/RubberStamp_blank.jpg");
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    }
+  </style>
   <div>
     <h2><code>&lt;template&gt;</code></h2>
     <!-- TODO(aboxhall): stamp image -->
     <pre>
-      <code>&lt;template id="hello"&gt;&lt;p&gt;Hello!&lt;/p&gt;&lt;/template&gt;</code>
+      <code>&lt;template id="hello"&gt;&lt;p&gt;Hello, world!&lt;/p&gt;&lt;/template&gt;</code>
       <code>&lt;script&gt;</code>
-      <code>    document.appendElement(
-        $("#hello").content.cloneNode(true));</code>
+      <code>    for(var i = 0; i < 3; i++) {</code>
+      <code>        document.appendElement(</code>
+      <code>            $("#hello").content.cloneNode(true));</code>
+      <code>    }</code>
       <code>&lt;/script&gt;</code>
     </pre>
+
+    <pre class="no-line-numbers">
+      <code>&lt;p&gt;Hello, world!&lt;/p&gt;</code>
+      <code>&lt;p&gt;Hello, world!&lt;/p&gt;</code>
+      <code>&lt;p&gt;Hello, world!&lt;/p&gt;</code>
+    </pre>
+
   </div>
 </section>
 
-<section class="slide">
+<section class="slide" id="custom">
+  <style>
+    #custom img#unicorn {
+    position: relative;
+    top: 100px;
+    left: 50px;
+    border: 1px solid rgba(0, 0, 0, 0.7);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.7);
+    }
+
+  </style>
   <div>
     <h2>Custom elements</h2>
+    <img id="unicorn" class="float-right" alt="Pearl the unicorn bike" src="pictures/Pearl_the_Unicorn_Bike.jpg">
     <ul>
-      <li>Name
-      <li>Prototype
-      <li>Lifecycle callbacks
+      <li>Name (<code>"unicorn-bike"</code>)
+      <li class="next">Prototype (<code>Object.prototype</code>)<!-- explain -->
+      <li class="next">Lifecycle callbacks
     </ul>
+    <!-- TODO(aboxhall): picture -->
+</section>
+
+<!-- TODO(aboxhall): Slide showing lifecycle/components -->
+<section class="slide" id="lifecycle">
+  <style>
+    #lifecycle td + td,
+    #lifecycle th + th {
+      padding-left: 10px;
+    }
+
+    #lifecycle code {
+    font-size: 80%;
+    }
+  </style>
+  <div>
+    <h2>Lifecycle callbacks</h2>
+    <table>
+      <tr>
+        <th>Callback</th><th>Called when...</th>
+      <tr>
+        <td><code>createdCallback()</code></td><td>this element instance is created</td>
+      </tr>
+      <tr>
+        <td><code>attachedCallback()</code></td><td>this element is inserted into the document></td>
+      </tr>
+      <tr>
+        <td><code>attributeChangedCallback(<br>attrName, oldVal, newVal)</code></td><td>an attribute was added, removed, or updated</td>
+      <tr>
+        <td><code>detachedCallback()</code></td><td>this element is removed from the document</td>
+      </tr>
+      </tr>
+    </table>
 </section>
 
 <section class="slide">
@@ -449,16 +569,94 @@ http://commons.wikimedia.org/wiki/File:Mola_mola_Schlegel.jpg
       <code>GmailButton.<mark>prototype</mark> = {</code>
       <code>  __proto__: HTMLButtonElement.prototype,</code>
       <code>  <mark>createdCallback</mark>: function() {</code>
-      <code>    this.appendChild($('template').content.cloneNode(true)};</code>
+      <code>    var templateContent = $('template').content;</code>
+      <code>    this.appendChild(templateContent.cloneNode(true)};</code>
       <code>  },</code>
-      <code>  <mark>attributeChangedCallback</mark>: function(attr, old, new) { … },</code>
+      <code>  <mark>attributeChangedCallback</mark>: function(att, was, is) {},</code>
       <code>  extends: 'button'</code>
       <code>}</code>
       <code>document.registerElement(<mark>'gmail-button'</mark>, GmailButton);</code>
     </pre>
+    <pre>
+      <code>&lt;gmail-button&gt;&lt;/gmail-button&gt;</code>
+    </pre>
+  </div>
+  <!-- TODO(aboxhall): show using the custom element -->
+  <!-- TODO(aboxhall): walk through lifecycle callbacks -->
+</section>
+
+<section class="slide">
+  <div>
+    <h2>HTML imports</h2>
+    <code>&lt;link <mark>rel="import"</mark> href="gmail-widgets.html"&gt;</code>
+    <!-- TODO(aboxhall): picture -->
+    <ul>
+      <li>Content is <strong>not</strong> rendered, but
+      <li>JavaScript context is shared and
+      <li><code>document</code> references the importing document:
+        <ul>
+          <li><code>document.registerElement()</code> operates on the importing document
+        </ul>
+    </ul>
+</section>
+
+<section class="slide" id="shadow">
+  <style>
+    #shadow .icon {
+    -webkit-margin-start: 25px;
+    content: url('data:image/png;base64,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');
+    float: right;
+    height: 128px;
+    margin-bottom: 10px;
+    margin-top: 4px;
+    width: 128px;
+    }
+  </style>
+  <div>
+    <h2>Shadow DOM</h2>
+    <!-- Those three pieces give us enough to create and easily use custom elements. Shadow DOM gives us a mechanism to encapsulate our presentation and hide the implementation details from the main DOM. -->
+    <!-- This example shows two encapsulation features of Shadow DOM:
+         - It encapsulates CSS styles. CSS styles from outside of that Shadow root won't leak inside,
+           and the style inside the shadow root won't leak out into the page. I can write whatever I want inside
+           that style block and it's always scoped inside the Shadow DOM. The outside page can style things
+           however it wants without making my custom checkbox look weird - well, mostly.
+         - It encapsulates IDREFs. I can put thirty of these elements in a page and that "circle" ID stays hidden
+           from the context of the main page. Other elements (including the style) inside of the same Shadow DOM
+           can refer to it, but nothing outside. -->
+    <img alt="Screenshot showing inspecting Shadow DOM in devtools" src="pictures/Shadow%20DOM%20screenshot.png"
+         width="800px" height="164px">
+    <div class="icon"></div>
   </div>
 </section>
 
+<section class="slide">
+  <div>
+    <h2>Explaining the web</h2>
+    <!-- -->
+    <ul>
+      <li>Goal: primitives which can "explain" how native elements work
+      <li class="next">Sufficient power to create existing elements, thus sufficient power to create new elements
+      <li class="next">Can then explain future web platform features in these terms
+      <li class="next">This is very much a work in progress, e.g. how do we explain <code>&lt;label&gt;</code>, or the focus style behavior of <code>&lt;button&gt;</code>?
+      <li class="next">ARIA very much has a role to play in this: this stretches ARIA far beyond its original use case
+    </ul>
+  </div>
+</section>
+
+<section class="slide">
+  <div>
+    <h2>Work in progress...</h2>
+    <!-- TODO(aboxhall) under construction gif -->
+    <ul>
+      <li>Specs are still under discussion
+        <ul>
+          <li>What level of encapsulation should Shadow DOM provide?
+          <li>How do we extend native elements?
+        </ul>
+      <li>Browser support for existing specs is... inconsistent
+    </ul>
+  </div>
+</section>
 
 <!--//  @aboxhall I dunno whether you meant to keep this or whether it was left over. I didn't want to delete it during merge if you meant to keep it
 
@@ -558,19 +756,28 @@ http://commons.wikimedia.org/wiki/File:Mola_mola_Schlegel.jpg
 </section>
 
 <section class="slide">
+  <style>
+    img.bottom-right {
+    position: absolute;
+    bottom:0;
+    right:0;
+    }
+  </style>
     <div>
         <h2>Bad News</h2>
 
         <p>Web Components are the new jQuery plugins</p>
 
         <div class="next">
-            <img src="pictures/Theodore_Sturgeon.jpg" class="float-right" alt="">
             <blockquote>
                 90% of <strike>science fiction</strike> <strike>jQuery plugins</strike> Web Components are shit.
                 <div><cite>-- Theodore Sturgeon</cite></div>
             </blockquote>
+                <img class="bottom-right" src="pictures/Theodore_Sturgeon.jpg"  alt="">
+
         </div>
     </div>
+
 </section>
 
 <section class="slide">
@@ -595,8 +802,13 @@ http://commons.wikimedia.org/wiki/File:Mola_mola_Schlegel.jpg
         <ul>
             <li class="next">Semantics and structure</li>
             <li class="next">Keyboard accessibility and focus control</li>
+            <ul>
+              <li class="next">Don't forget visible focus styles!
+            </ul>
             <li class="next">Color contrast</li>
             <li class="next">Proper labeling and alternative formats</li>
+            <ul>
+              <li class="next">Where necessary, expose attributes for this</li>
         </ul>
     </div>
 </section>
@@ -635,37 +847,6 @@ http://commons.wikimedia.org/wiki/File:Mola_mola_Schlegel.jpg
 
 <section class="slide">
     <div>
-        <h2>I said, consider the User</h2>
-        <pre style="font-size: .5em;"><code>&lt;template id="bargraph-template"&gt;
-            &lt;style&gt;/** CSS all the things */&lt;/style&gt;
-            &lt;content&gt;&lt;/content&gt;
-            &lt;/template&gt;
-            &lt;script&gt;
-            var doc = document.currentScript.ownerDocument,
-            BargraphProto = Object.create(HTMLElement.prototype),
-            template = doc.querySelector("#bargraph-template"),
-            graph = template.content.cloneNode(true);
-
-            BargraphProto.createdCallback = function() {
-            // moar stuff here
-
-            var shadow = this.shadow = this.createShadowRoot();
-            this.shadow.appendChild(graph);
-
-            // even moar stuff here
-
-            var Bargraph = doc.registerElement('bar-graph', {
-            'prototype': BargraphProto
-            });
-            &lt;/script&gt;
-        </code></pre>
-        <a href="https://github.com/karlgroves/bar-graph/tree/accessible">Bar Graph (accessible)</a>
-    </div>
-</section>
-
-
-<section class="slide">
-    <div>
         <h2>Be Creative</h2>
         <div class="text-center"><a href="https://github.com/karlgroves/image-caption"><img src="pictures/image-caption.png" alt="Example of image-caption" /></a></div>
     </div>
@@ -690,6 +871,33 @@ http://commons.wikimedia.org/wiki/File:Mola_mola_Schlegel.jpg
     </div>
 </section>
 
+<section class="slide cover" id="no-fate">
+  <style>
+    #no-fate h2 {
+    text-shadow: 2px 2px 2px #fff;
+    }
+    #no-fate .scrim {
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 10px;
+    border-radius: 5px;
+    }
+    #no-fate p {
+    margin: 0;
+    font-size: 120%;
+    text-shadow: 1px 1px 1px #fff;
+    }
+  </style>
+  <div>
+    <h2>The road ahead</h2>
+    <div class="scrim">
+    <p>Things are changing
+    <p class="next">The final shape is yet to be decided
+    <p class="next">We have work to do!
+    </div>
+    <img alt="winding road" src="pictures/the-road-ahead.jpg" width="1024px" height="685px">
+
+</section>
+
 <section class="slide">
     <div>
         <h2>Contact Us</h2>
@@ -700,7 +908,20 @@ http://commons.wikimedia.org/wiki/File:Mola_mola_Schlegel.jpg
                 <strong>Email</strong>
             </dt>
             <dd>
-               <a href="mailto:aboxhall@google.com">aboxhall@google.com</a>
+               <a href="mailto:aboxhall@chromium.org">aboxhall@chromium.org</a>
+            </dd>
+            <dt>
+              <strong>Work</strong>
+            </dt>
+            <dd>
+              <a href="http://www.google.com/accessibility/">Google Accessibility</a>,
+              <a href="http://www.chromium.org/Home">Chromium</a>
+            </dd>
+            <dt>
+              <strong>Twitter</strong>
+            </dt>
+            <dd>
+              <a href="https://twitter.com/sundress">@sundress</a>
             </dd>
         </dl>
     </div>
@@ -762,7 +983,6 @@ http://commons.wikimedia.org/wiki/File:Mola_mola_Schlegel.jpg
             <li><a href="http://www.html5rocks.com/en/tutorials/webcomponents/customelements/">Custom Elements Tutorial
                 (HTML5 Rocks)</a></li>
             <li><a href="http://w3c.github.io/webcomponents/spec/custom/">Custom Elements Spec</a></li>
-
             </ul>
     </div>
 </section>
@@ -771,9 +991,11 @@ http://commons.wikimedia.org/wiki/File:Mola_mola_Schlegel.jpg
     <div>
         <h2>Moar Resources</h2>
         <ul>
+            <li><a href="https://extensiblewebmanifesto.org/">Extensible web manifesto</a></li>
             <li><a href="http://w3c.github.io/webcomponents/spec/shadow/">Shadow DOM Spec</a></li>
             <li><a href="http://www.w3.org/html/wg/drafts/html/master/scripting-1.html#the-template-element">Template Element Spec</a></li>
             <li><a href="http://w3c.github.io/webcomponents/spec/imports/">Imports Spec</a></li>
+            <li><a href="https://www.polymer-project.org/articles/accessible-web-components.html">Accessible Web Components</a></li>
             <li><a href="http://www.paciellogroup.com/blog/2014/09/web-components-punch-list/">Web components punch list</a></li>
             <li><a href="http://bosonic.github.io/">Bosonic</a></li>
 
