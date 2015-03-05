@@ -408,6 +408,8 @@ a {
                                               .list {
                                                   background-image: url(../images/linen@2x.png);
                                                   background-size: 256px;
+                                                  clip: rect(0,auto,auto,0);
+                                                  padding: 80px 0 40px 100px;
                                               }
                                           }
 .list .caption,
